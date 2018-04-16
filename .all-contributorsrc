@@ -1,0 +1,23 @@
+{
+  "projectName": "styled-fns",
+  "projectOwner": "chengjianhua",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "chengjianhua",
+      "name": "Jianhua Cheng",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10795207?v=3",
+      "profile": "https://chengjianhua.github.io",
+      "contributions": [
+        "code",
+        "doc",
+        "infra",
+        "test"
+      ]
+    }
+  ]
+}
