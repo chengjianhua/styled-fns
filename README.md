@@ -20,14 +20,6 @@
 [![Star on GitHub][github-star-badge]][github-star]
 [![Tweet][twitter-badge]][twitter]
 
-## The problem
-
-// TODO
-
-## This solution
-
-// TODO
-
 ## Table of Contents
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
@@ -36,8 +28,9 @@
 
 * [Installation](#installation)
 * [Usage](#usage)
+* [API](#api)
 * [Inspiration](#inspiration)
-* [Other Solutions](#other-solutions)
+* [More features](#more-features)
 * [Contributors](#contributors)
 * [LICENSE](#license)
 
@@ -54,13 +47,31 @@ npm install --save styled-fns
 
 ## Usage
 
-// TODO
+```javascript
+import {variants} from 'styled-fns'
+
+const getColor = variants({
+  primary: 'blue',
+  secondary: 'violet',
+  danger: 'red',
+})
+```
+
+This library is shipped as an ESM bundle, importing only the function you need could help reduce the size of your bundle.
+
+## API
+
+See details in [API Documentation](./other/docs/API.md).
 
 ## Inspiration
 
-// TODO
+A few utilities are inspired by other fascinating libraries:
 
-## Other Solutions
+* `variants` is inspired by [styled-theming](https://github.com/styled-components/styled-theming).
+
+And the idea of creating this library is inspired by [react-fns](https://github.com/jaredpalmer/react-fns), we have the similar name obviously 🤷‍.
+
+## More features
 
 I'm not aware of any, if you are please [make a pull request][prs] and add it
 here!
