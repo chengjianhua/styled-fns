@@ -20,7 +20,7 @@
     "precommit": "kcd-scripts precommit"
   },
   "files": ["dist"],
-  "keywords": [],
+  "keywords": ["styled-components", "styled", "utility", "tool"],
   "author":
     "Jianhua Cheng <w.chengjianhua@gmail.com> (https://chengjianhua.github.io/)",
   "license": "MIT",
