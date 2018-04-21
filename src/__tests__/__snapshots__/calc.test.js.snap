@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`calc should throw custom error message while input contains variables but variable has unit without being wrapped 1`] = `
+"You may not wrap your variable has unit with \`\${}\`
+
+Invalid or unexpected token"
+`;
+
+exports[`calc should throw exception if input is full string without variables 1`] = `"Do not support the full string expression without variables right now temporarily"`;
+
+exports[`calc should throw exception if occurs more than two sort of units in expression 1`] = `"the calculation expression should contain only one sort of unit"`;

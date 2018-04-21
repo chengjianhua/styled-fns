@@ -24,7 +24,9 @@
   "author":
     "Jianhua Cheng <w.chengjianhua@gmail.com> (https://chengjianhua.github.io/)",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "invariant": "^2.2.4"
+  },
   "devDependencies": {
     "kcd-scripts": "^0.36.1"
   },
