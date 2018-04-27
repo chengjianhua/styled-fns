@@ -41,5 +41,8 @@
   "bugs": {
     "url": "https://github.com/chengjianhua/styled-fns/issues"
   },
-  "homepage": "https://github.com/chengjianhua/styled-fns#readme"
+  "homepage": "https://github.com/chengjianhua/styled-fns#readme",
+  "peerDependencies": {
+    "styled-components": "^3.2.6"
+  }
 }

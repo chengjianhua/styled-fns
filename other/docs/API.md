@@ -42,7 +42,9 @@ const ANOTHER_WIDTH = calc`(${WIDTH} * 2) + ${'100px'}`
 // ANOTHER_WIDTH -> '300px'
 ```
 
-It's worth noting that <code>calc``</code> leverage the placeholder in template literal to recognize the variable with a unit. **So if you want to declare a value with a unit in your expression, you must put them inside placeholder `${}`, throwing an exception otherwise**.
+It's worth noting that <code>calc``</code>leverage the placeholder in template literal to recognize the variable with a unit.
+
+**So if you want to declare a value with a unit in your expression, you must put them inside placeholder `${}`, throwing an exception otherwise**.
 
 If the expression doesn't contain a unit, then the return value of `calc` would by type of `number` instead of a `string`.
 
