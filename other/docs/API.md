@@ -51,3 +51,35 @@ It's worth noting that ` calc`` ` leverage the placeholder in template literal t
 If the expression doesn't contain a unit, then the return value of `calc` would by type of `number` instead of a `string`.
 
 > Warning: there can only be one unit in the expression. It's not same as `calc()` function in css properties which calculates layout dynamically with multiple units.
+
+### ` is()`` `
+
+This utility is a function accepts an argument is `string` or `function` and return a tagged template function. The other types of params will cause it throwing an error.
+
+While param is `string`, check whether `props[checker]` is true:
+
+```javascript
+import {is} from 'styled-fns'
+
+const Example = styled.div`
+  ${is('loading')`
+    display: none;
+  `};
+`
+
+// only while `props.loading` is true, the component will display as `none`
+```
+
+While param is `function`, the checker will accept `props` as its argument:
+
+```javascript
+import {is} from 'styled-fns'
+
+const Example = styled.div`
+  ${is(({loading, primary}) => loading && primary)`
+    display: none;
+  `};
+`
+
+// while both `props.loading` and `props.primary` are true, the component will display as `none`
+```

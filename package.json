@@ -28,10 +28,15 @@
     "invariant": "^2.2.4"
   },
   "devDependencies": {
-    "kcd-scripts": "^0.36.1"
+    "eslint-config-react": "^1.1.7",
+    "jest-styled-components": "^5.0.1",
+    "kcd-scripts": "^0.36.1",
+    "react": "^16.3.2",
+    "react-test-renderer": "^16.3.2",
+    "styled-components": "^3.2.6"
   },
   "eslintConfig": {
-    "extends": "./node_modules/kcd-scripts/eslint.js"
+    "extends": ["./node_modules/kcd-scripts/eslint.js"]
   },
   "eslintIgnore": ["node_modules", "coverage", "dist"],
   "repository": {

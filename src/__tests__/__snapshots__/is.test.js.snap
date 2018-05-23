@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`is should accept a function as argument \`checker\` to check whether \`checker(props) is true or false\` 1`] = `
+.c0 {
+  display: none;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`is should accept a function as argument \`checker\` to check whether \`checker(props) is true or false\` 2`] = `
+<div
+  className=""
+/>
+`;
+
+exports[`is should accept a function as argument \`checker\` to check whether \`checker(props) is true or false\` 3`] = `
+<div
+  className=""
+/>
+`;
+
+exports[`is should accept a string as argument \`name\` to check whether \`props[name]\` is true or false 1`] = `
+.c0 {
+  display: none;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`is should accept a string as argument \`name\` to check whether \`props[name]\` is true or false 2`] = `
+<div
+  className=""
+/>
+`;
+
+exports[`is should throw error if argument is not type of string or function 1`] = `"[styled-fns]: \`is()\` should accept string or function as argument"`;
