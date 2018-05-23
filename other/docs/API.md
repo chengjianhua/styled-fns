@@ -1,7 +1,7 @@
 ### `variants`
 
 ```javascript
-({ [key: any]: any }, (propName = 'variant'))
+({ [key: any]: any }, (propName: string = 'variant'), defaultValue: any)
 ```
 
 The first argument is an object whose keys represent the value of variant, and values correspond to the specified variant value.
@@ -20,18 +20,20 @@ const getColor = variants(
     danger: 'red',
   },
   'type',
+  'black'
 )
 
 const Button = styled.button`
   color: ${getColor};
 `
 
-<Button type="primary" />
+<Button type="primary" /> // color: blue;
+<Button type="no-match" /> // color: black;
 ```
 
-### <code>calc``</code>
+### ` calc`` `
 
-<code>calc``</code> is a tagged template used to calculate math expression that involves calculations of unit.
+` calc`` ` is a tagged template used to calculate math expression that involves calculations of unit.
 
 For example:
 
@@ -42,7 +44,7 @@ const ANOTHER_WIDTH = calc`(${WIDTH} * 2) + ${'100px'}`
 // ANOTHER_WIDTH -> '300px'
 ```
 
-It's worth noting that <code>calc``</code>leverage the placeholder in template literal to recognize the variable with a unit.
+It's worth noting that ` calc`` ` leverage the placeholder in template literal to recognize the variable with a unit.
 
 **So if you want to declare a value with a unit in your expression, you must put them inside placeholder `${}`, throwing an exception otherwise**.
 

@@ -25,4 +25,21 @@ describe('variants', () => {
 
     expect(matched).toBe(primaryValue)
   })
+
+  it('should fallback to the default value if not matched', () => {
+    const defaultValue = 'red'
+
+    const getMatched = variants(
+      {
+        primary: 'green',
+        secondary: 'blue',
+      },
+      null,
+      defaultValue,
+    )
+
+    const matched = getMatched({variant: 'no-match'})
+
+    expect(matched).toBe(defaultValue)
+  })
 })

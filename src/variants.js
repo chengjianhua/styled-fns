@@ -1,7 +1,9 @@
-export default function variants(values, name = 'variant') {
+export default function variants(values, name, defaultValue) {
   return function getVariant(props) {
-    const variant = props[name]
+    const variant = props[name || 'variant']
 
-    return variant && values[variant]
+    if (!variant) return null
+
+    return values[variant] || defaultValue
   }
 }
