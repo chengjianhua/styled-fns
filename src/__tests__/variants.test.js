@@ -1,6 +1,15 @@
 import variants from '../variants'
 
 describe('variants', () => {
+  it('should return null if no value passed', () => {
+    const getMatched = variants({
+      primary: 'blue',
+      secondary: 'blue',
+    })
+
+    expect(getMatched({})).toBe(null)
+  })
+
   it('should return matched value', () => {
     const primaryValue = 'red'
     const getMatched = variants({
