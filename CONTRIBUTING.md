@@ -68,5 +68,5 @@ Also, please watch the repo and respond to questions/bug reports/feature
 requests! Thanks!
 
 [egghead]: https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github
-[all-contributors]: https://github.com/chengjianhua/all-contributors
+[all-contributors]: https://github.com/kentcdodds/all-contributors
 [issues]: https://github.com/chengjianhua/styled-fns/issues
