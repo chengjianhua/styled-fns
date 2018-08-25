@@ -11,11 +11,10 @@
   },
   "scripts": {
     "add-contributor": "kcd-scripts contributors add",
-    "build:es":
-      "FORCE_COLOR=1 cross-env BUILD_TREESHAKE=true kcd-scripts build -d es",
+    "build:es": "BUILD_TREESHAKE=true kcd-scripts build -d es",
     "build:bundle": "FORCE_COLOR=1 kcd-scripts build --bundle",
     "prebuild": "rm -rf es dist",
-    "build": "FORCE_COLOR=1 concurrently \"npm:build:*\"",
+    "build": "concurrently \"npm:build:*\"",
     "lint": "kcd-scripts lint",
     "test": "kcd-scripts test",
     "test:update": "npm test -- --updateSnapshot --coverage",
@@ -29,10 +28,10 @@
     "Jianhua Cheng <w.chengjianhua@gmail.com> (https://chengjianhua.github.io/)",
   "license": "MIT",
   "dependencies": {
-    "concurrently": "^4.0.0",
     "invariant": "^2.2.4"
   },
   "devDependencies": {
+    "concurrently": "^4.0.0",
     "eslint-config-react": "^1.1.7",
     "jest-styled-components": "^6.1.1",
     "kcd-scripts": "^0.42.1",
