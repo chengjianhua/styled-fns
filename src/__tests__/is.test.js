@@ -9,7 +9,8 @@ import is from '../is'
 describe('is', () => {
   it('should throw error if argument is not type of string or function', () => {
     expect(() => {
-      styled.div`
+      // eslint-disable-next-line no-unused-vars
+      const Comp = styled.div`
         ${is(true)``};
       `
     }).toThrowErrorMatchingSnapshot()
