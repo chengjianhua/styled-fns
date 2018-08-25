@@ -3,15 +3,19 @@
   "version": "0.0.0-semantically-released",
   "description":
     "A collection of utility functions to use with `styled-components`, make writing component with SC more fascinating.",
-  "main": "dist/index.js",
-  "module": "dist/styled-fns.esm.js",
+  "main": "dist/styled-fns.cjs.js",
+  "module": "es/esm-entry.js",
   "engines": {
     "node": "> 4",
     "npm": "> 3"
   },
   "scripts": {
     "add-contributor": "kcd-scripts contributors add",
-    "build": "kcd-scripts build --bundle",
+    "build:es":
+      "FORCE_COLOR=1 cross-env BUILD_TREESHAKE=true kcd-scripts build -d es",
+    "build:bundle": "FORCE_COLOR=1 kcd-scripts build --bundle",
+    "prebuild": "rm -rf es dist",
+    "build": "FORCE_COLOR=1 concurrently \"npm:build:*\"",
     "lint": "kcd-scripts lint",
     "test": "kcd-scripts test",
     "test:update": "npm test -- --updateSnapshot --coverage",
@@ -19,20 +23,21 @@
     "setup": "npm install && npm run validate -s",
     "precommit": "kcd-scripts precommit"
   },
-  "files": ["dist"],
+  "files": ["dist", "es"],
   "keywords": ["styled-components", "styled", "utility", "tool"],
   "author":
     "Jianhua Cheng <w.chengjianhua@gmail.com> (https://chengjianhua.github.io/)",
   "license": "MIT",
   "dependencies": {
+    "concurrently": "^4.0.0",
     "invariant": "^2.2.4"
   },
   "devDependencies": {
     "eslint-config-react": "^1.1.7",
-    "jest-styled-components": "^5.0.1",
-    "kcd-scripts": "^0.36.1",
-    "react": "^16.3.2",
-    "react-test-renderer": "^16.3.2",
+    "jest-styled-components": "^6.1.1",
+    "kcd-scripts": "^0.42.1",
+    "react": "^16.4.2",
+    "react-test-renderer": "^16.4.2",
     "styled-components": "^3.2.6"
   },
   "eslintConfig": {

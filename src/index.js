@@ -1,7 +1,3 @@
-import variants from './variants'
-import calc from './calc'
+import * as styledFns from './esm-entry'
 
-export default {
-  variants,
-  calc,
-}
+export default styledFns
