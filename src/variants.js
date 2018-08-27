@@ -4,6 +4,8 @@ export default function variants(values, name, defaultValue) {
 
     if (!variant) return null
 
-    return values[variant] || defaultValue
+    const value = values[variant]
+
+    return value === undefined ? defaultValue : value
   }
 }
